@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:background="?android:selectableItemBackground"
+    >
+    <TextView
+        android:id="@+id/textView_fragmentlist_task_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:ellipsize="end"
+        android:text="Dark Knight"
+        android:textColor="@android:color/black"
+        android:gravity="start"
+        android:layout_gravity="center_vertical"
+        android:textAppearance="?attr/textAppearanceListItem"
+
+        />
+    <TextView
+        android:id="@+id/textView_fragmentlist_country_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="USA"
+        android:layout_gravity="center_vertical"
+        android:textAppearance="?attr/textAppearanceSearchResultSubtitle"
+        />
+</LinearLayout>
