@@ -20,3 +20,9 @@ This demo shows the implementation about the MVP architecture by using Dagger2+R
 - The presenter is injected through the dependency injection, the presenter also need to know about the view instance so that it can execute the logic for the view.
 - The underlying implementation can change based on the requirements or design, but the presenter will continue to interact with the view via the interface contract.
 - The model object in turn forwards the call to a repository implementation to load and return the entity object.
+
+## Dagger 2
+- The Module class is where the dagger will keep track of the dependecies, it must be annotated with @module. In such modules dagger will look for variable methods and possible instance providers. The methods that will expose available return type should also be annotated with @provides decorator.
+- The component is where the dagger konws where to inject the dependencies to, the injector class is called component. to annotate this class with @component declaration and set the modules that defined early. The activities, services or fragments that can be added should be declared in this class with individual inject() methods.
+- Dagger will generate the initialization Class to return the instance we defined in related modules. We use the custom application class to handle the initial initialization.
+- in onCreate() method the injection will be defined, so we can inject the dependecies at runtime by providing an @inject annotation.
