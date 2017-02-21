@@ -14,3 +14,9 @@ This demo shows the implementation about the MVP architecture by using Dagger2+R
 	- View has a reference to the presenter, propagates events from the UI to the presenter, view exposes methods which control the presentation of data(or model).
 	- The repository pattern separates the business logic from the underlying data source. It provides a substituion point for the unit tests, in turn enabling a flexible architecture.
 	- When any of the external parts of the system become obsolete, like the database, or the web framework, we can replace those obsolete elements with a minimum of fuss.
+
+## MVP in action
+- Each layer has its' own defined interface, so they won't interact with the concrete implementation directly. 
+- The presenter is injected through the dependency injection, the presenter also need to know about the view instance so that it can execute the logic for the view.
+- The underlying implementation can change based on the requirements or design, but the presenter will continue to interact with the view via the interface contract.
+- The model object in turn forwards the call to a repository implementation to load and return the entity object.
