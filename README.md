@@ -26,3 +26,10 @@ This demo shows the implementation about the MVP architecture by using Dagger2+R
 - The component is where the dagger konws where to inject the dependencies to, the injector class is called component. to annotate this class with @component declaration and set the modules that defined early. The activities, services or fragments that can be added should be declared in this class with individual inject() methods.
 - Dagger will generate the initialization Class to return the instance we defined in related modules. We use the custom application class to handle the initial initialization.
 - in onCreate() method the injection will be defined, so we can inject the dependecies at runtime by providing an @inject annotation.
+
+##JUnit and Mockito
+- We can remove all the third party dependencies out of the equation and using an interface and mocking it helps us deal with these kind of problems.
+- We can create mocks in `setup()` function with `@before` annotation and can define the behaviour which we see fit for each test and for each interaction using these mocks, the focus is always on testing the core logic only.
+- using `when().thenReturn()` function to simulate the specific situation.
+- If we want to test the interactions inside the View, we can use `verifyZeroInteractions(mockView)` function.
+- using `verify(mockView,times(1)).function()` to test the interaction has been called only once.
