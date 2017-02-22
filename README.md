@@ -33,3 +33,8 @@ This demo shows the implementation about the MVP architecture by using Dagger2+R
 - using `when().thenReturn()` function to simulate the specific situation.
 - If we want to test the interactions inside the View, we can use `verifyZeroInteractions(mockView)` function.
 - using `verify(mockView,times(1)).function()` to test the interaction has been called only once.
+
+##Retrofit 2
+- Retrofit is a type-safe REST client for Android, it provides a powerful framework for authenticating and interacting with API, it sends network requests with OkHttp. Retrofit handles entire network call as well as json/xml parsing.
+- We can define the endpoints and use annotations on the interface methods and its parameters to indicate how a request will be handled.
+- using the interceptor for debugging purposes.
