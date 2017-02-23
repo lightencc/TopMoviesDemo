@@ -38,3 +38,9 @@ This demo shows the implementation about the MVP architecture by using Dagger2+R
 - Retrofit is a type-safe REST client for Android, it provides a powerful framework for authenticating and interacting with API, it sends network requests with OkHttp. Retrofit handles entire network call as well as json/xml parsing.
 - We can define the endpoints and use annotations on the interface methods and its parameters to indicate how a request will be handled.
 - using the interceptor for debugging purposes.
+
+## RxJava
+- RxJava is a library for composing asynchronous and event-based programs by using observable sequences.
+- An Observable emits items; a Subscriber consumes those items. A data flow that can be transformed, filtered or use to create new streams.
+- the `subscribeOn()` method which allows us to run the value creation code on the specific thread, namely the thread is not the UI thread, `observeOn()` method which allow us to observe the emitted values of observable on a appropriate thread namely the main UI thread.
+- Subscriptions can be `unsubscribe()` to disconnect from the observer, the observable we created will no longer receive emitions. 
